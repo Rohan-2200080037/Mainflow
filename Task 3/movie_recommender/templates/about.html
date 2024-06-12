@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Recommender!</h1>
+        <p>We recommend you movies based on the ratings of users</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Recommender.html">Recommender</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="profile">
+                <img src="default-profile-pic.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+                <span class="username" id="username">User</span>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="profile.html">Profile</a>
+                    <a href="settings.html">Settings</a>
+                    <a href="index.html" onclick="signOut()">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="about-section">
+            <h2>About Us</h2>
+            <p>Welcome to Movie Recommender! We are dedicated to helping you find the best movies based on user ratings. Our system analyzes thousands of user reviews to provide you with personalized movie recommendations. Whether you are looking for the latest blockbuster or a hidden gem, we've got you covered.</p>
+            <p>Our mission is to make movie selection easier and more enjoyable. We believe that everyone deserves a great movie experience, and we strive to deliver recommendations that suit your taste and preferences.</p>
+            <p>Thank you for choosing Movie Recommender. We hope you find your next favorite movie with us!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Movie Recommender. All rights reserved.</p>
+    </footer>
+    <script src="../scripts/Profilescripts.js"></script>
+</body>
+</html>

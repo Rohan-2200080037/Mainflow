@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="stylesRecommend.css">
+</head>
+<body onload="initialDisplayMovies()">
+    <header>
+        <h1>Movie Recommender!</h1>
+        <p>We recommend you movies based on the ratings of users</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search movies...">
+            <button onclick="searchMovies()">Search</button>
+        </div>
+
+        <div class="filter-container">
+            <label for="genreSelect">Filter by Genre:</label>
+            <select id="genreSelect">
+                <option value="all">All Genres</option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <!-- Add more genres as needed -->
+            </select>
+        </div>
+
+        <div class="sort-container">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect">
+                <option value="title">Title</option>
+                <option value="rating">Rating</option>
+                <!-- Add more sorting options as needed -->
+            </select>
+        </div>
+
+        <div id="movieList">
+            <!-- Movie list will be dynamically populated here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Movie Recommender. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

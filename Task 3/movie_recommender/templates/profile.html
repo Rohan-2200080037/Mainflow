@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Recommender!</h1>
+        <p>We recommend you movies based on the ratings of users</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Recommender.html">Recommender</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="profile">
+                <img src="default-profile-pic.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+                <span class="username" id="username">User</span>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="profile.html">Profile</a>
+                    <a href="settings.html">Settings</a>
+                    <a href="#" onclick="signOut()">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="" alt="Profile Picture" class="profile-pic-large" id="profile-pic-large">
+            <h1 class="username-large" id="username-large"></h1>
+        </div>
+        <div class="profile-details">
+            <h2>Contact Information</h2>
+            <ul>
+                <li>Email: <span id="email"></span></li>
+                <li>Phone: <span id="phone"></span></li>
+                <li>Address: <span id="address"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../scripts/profile.js"></script>
+</body>
+</html>

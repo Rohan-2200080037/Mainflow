@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Settings</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Recommender.html">Recommender</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="profile">
+                <img src="default-profile-pic.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+                <span class="username" id="username">User</span>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="profile.html">Profile</a>
+                    <a href="settings.html">Settings</a>
+                    <a href="index.html" onclick="signOut()">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="settings-container">
+            <h2>Account Settings</h2>
+            <div class="theme-toggle">
+                <label for="theme-toggle">Toggle Theme:</label>
+                <input type="range" min="0" max="1" step="1" value="0" id="theme-toggle">
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Movie Recommender. All rights reserved.</p>
+    </footer>
+    <script>
+        // Function to toggle dark mode
+        document.addEventListener("DOMContentLoaded", function() {
+            const themeToggle = document.getElementById("theme-toggle");
+            const body = document.body;
+    
+            // Set initial theme based on local storage
+            setThemeFromLocalStorage();
+    
+            // Toggle theme on slider change
+            themeToggle.addEventListener("change", function() {
+                toggleTheme();
+            });
+        });
+    
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.getElementById("theme-toggle");
+            const isDarkMode = parseInt(themeToggle.value) === 1;
+    
+            if (isDarkMode) {
+                body.classList.add("dark-mode");
+            } else {
+                body.classList.remove("dark-mode");
+            }
+    
+            // Store theme preference in local storage
+            localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+        }
+    
+        function setThemeFromLocalStorage() {
+            const body = document.body;
+            const theme = localStorage.getItem("theme");
+    
+            if (theme === "dark") {
+                body.classList.add("dark-mode");
+                document.getElementById("theme-toggle").value = 1;
+            }
+        }
+    
+        // Function to sign out
+        function signOut() {
+            window.location.href = "index.html";
+        }
+    </script>
+    <script src="../scripts/Profilescripts.js"></script>
+    
