@@ -1,0 +1,188 @@
+* {
+            margin: 0;
+            padding: 10;
+            box-sizing: border-box;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        body {
+            color: #fff;
+            background: linear-gradient(90deg, rgba(2, 0, 0.6, 1) 0%, rgb(2, 5, 37) 80%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #header {
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.2ms;
+        }
+
+        .boxs {
+            opacity: 0;
+            transition: opacity 3.5s ease;
+        }
+
+        @keyframes slideIn1 {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .container {
+            padding: 2px 4%;
+            opacity: 0;
+            transition: all 0.2ms;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 20px;
+        }
+
+        nav ul li:hover {
+            scale: 1.1;
+            transition: 0.5s;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 22px;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #dbc7cd;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        nav .fas {
+            display: none;
+        }
+
+        /* Photography */
+        #photographs {
+            margin-right: -40px;
+        }
+
+        .pos_Set {
+            margin-top: -110px;
+            height: 100vh;
+            margin-right: 10px;
+            align-items: center;
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+        }
+
+        .sub-project {
+            margin-top: 50px;
+            margin-bottom: 40px;
+            font-size: 60px;
+            font-weight: 600;
+            color: #ffffff;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider {
+            position: relative;
+            width: 600px;
+            height: 700px;
+            margin-top: 30px;
+            margin-bottom: -20px;
+            transform-style: preserve-3d;
+            animation: rotate 40s linear infinite;
+            -webkit-animation: rotate 40s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: perspective(1200px) rotateY(0deg);
+            }
+
+            100% {
+                transform: perspective(1200px) rotateY(360deg);
+            }
+        }
+
+        .slider span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(calc(var(--i)*30deg)) translateZ(-1200px);
+        }
+
+        .slider span img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: 3s;
+        }
+
+        .slider span img:hover {
+            transform: scale(1.1);
+        }
+
+        .follow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -220px;
+        }
+                /* Add these styles to handle fullscreen effect */
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.9); /* Adjust transparency as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fullscreen img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+

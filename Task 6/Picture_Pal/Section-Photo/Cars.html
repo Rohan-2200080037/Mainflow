@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cars Gallery</title>
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="photo.css">
+    <link rel="stylesheet" href="jquery.flipster.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container boxs">
+            <nav>
+                <h1 class="sub-title">Cars Gallery</h1>
+                <ul id="sidemenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Photographs Section -->
+    <div id="projects">
+        <div id="photographs" class="box">
+            <div class="pos_Set">
+                <div class="slider">
+                    <span style="--i:1;"><img class="scales" src="https://www.graygroupintl.com/hubfs/Gray%20Group%20International/GGI%20-%20Assign%20and%20Sort%20%28WebP%29/Vintage%20Cars%20More%20Than%20Metal%20and%20Chrome.webp" alt="Vintage Car"></span>
+                    <span style="--i:2;"><img class="scales" src="https://miro.medium.com/v2/resize:fit:1200/1*AkfP2Sb-T0QoaQoSJG_DOg.jpeg" alt="Car"></span>
+                    <span style="--i:3;"><img class="scales" src="https://hips.hearstapps.com/townandcountry/assets/16/14/1954-mercedes-300sl-gullwing-a_1.jpg" alt="Mercedes 300SL"></span>
+                    <span style="--i:4;"><img class="scales" src="https://imgd.aeplcdn.com/1280x720/cw/ec/32392/Aston-Martin-DB11-Exterior-115405.jpg?wm=0" alt="Aston Martin DB11"></span>
+                    <span style="--i:5;"><img class="scales" src="https://i.pinimg.com/originals/b1/bf/01/b1bf0194c88bbbc002d42e1a13a61834.jpg" alt="Classic Car"></span>
+                    <span style="--i:6;"><img class="scales" src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/2020-Chevrolet-Corvette-Stingray/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=960" alt="Chevrolet Corvette Stingray"></span>
+                    <span style="--i:7;"><img class="scales" src="https://i.pinimg.com/736x/d2/6d/2a/d26d2aab2ff63cb48b3a91b0e8e0aa55.jpg" alt="Luxury Car"></span>
+                    <span style="--i:8;"><img class="scales" src="https://media.architecturaldigest.com/photos/63079fc7b4858efb76814bd2/16:9/w_4000,h_2250,c_limit/9.%20DeLorean-Alpha-5%20%5BDeLorean%5D.jpg" alt="DeLorean Alpha-5"></span>
+                    <span style="--i:9;"><img class="scales" src="https://finty-us.us-southeast-1.linodeobjects.com/images/Are-classic-cars-a-good-investment.width-1116.jpg" alt="Classic Car Investment"></span>
+                    <span style="--i:10;"><img class="scales" src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-33204,resizemode-75,msid-96191686/industry/auto/auto-news/super-luxury-cars-clock-50-growth-highest-ever-in-india.jpg" alt="Super Luxury Cars"></span>
+                    <span style="--i:11;"><img class="scales" src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/rolls_royce_phantom_top_10.jpg?itok=XjL9f1tx" alt="Rolls Royce Phantom"></span>
+                    <span style="--i:12;"><img class="scales" src="https://carwow-uk-wp-3.imgix.net/18015-MC20BluInfinito-scaled-e1707920217641.jpg" alt="MC20 Blu Infinito"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Photographs Section -->
+
+    <!-- Scroll to Top function -->
+    <div id="progress">
+        <span id="progress-value" class="gotoTop">
+            <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M128.4,189.3L233.4,89c5.8-6,13.7-9,22.4-9c8.7,0,16.5,3,22.4,9l105.4,100.3c12.5,11.9,12.5,31.3,0,43.2c-12.5,11.9-32.7,11.9-45.2,0L288,184.4v217c0,16.9-14.3,30.6-32,30.6c-17.7,0-32-13.7-32-30.6v-217l-50.4,48.2c-12.5,11.9-32.7,11.9-45.2,0C115.9,220.6,115.9,201.3,128.4,189.3z" />
+            </svg>
+        </span>
+    </div>
+    <div class="end">
+        <p>© Picture_pal. All rights reserved.</p>
+    </div>
+
+    <script src="Scroll-Top.js"></script>
+    <script src="photo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="jquery.flipster.min.js"></script>
+    <script>
+        // JavaScript for image fullscreen toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.scales');
+            
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    img.classList.toggle('fullscreen');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
